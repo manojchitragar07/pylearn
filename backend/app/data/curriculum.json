@@ -1,0 +1,1470 @@
+[
+  {
+    "id": "module-1",
+    "order": 1,
+    "title": "Getting Started",
+    "description": "Discover what programming is and write your very first Python program.",
+    "icon": "🚀",
+    "color": "#6366f1",
+    "quiz": [
+      {
+        "id": "q1-1",
+        "type": "multiple-choice",
+        "question": "What does the print() function do in Python?",
+        "options": [
+          "Prints a document",
+          "Displays text or values on the screen",
+          "Saves data to a file",
+          "Calculates a result"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The print() function displays text, numbers, or any value to the console (screen). It is one of the most commonly used functions in Python."
+      },
+      {
+        "id": "q1-2",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "print(\"Hello\")\nprint(\"World\")",
+        "options": [
+          "Hello World",
+          "Hello\nWorld",
+          "\"Hello\"\n\"World\"",
+          "Error"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Each print() statement outputs on a new line by default. So \"Hello\" appears on the first line and \"World\" on the second."
+      },
+      {
+        "id": "q1-3",
+        "type": "find-error",
+        "question": "What is wrong with this code?",
+        "code": "print(\"Hello World\"",
+        "options": [
+          "The quotes are wrong",
+          "A closing parenthesis ) is missing",
+          "print should be PRINT",
+          "Nothing is wrong"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Python's print() function requires matching opening and closing parentheses. The closing ) is missing here."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-1-1",
+        "moduleId": "module-1",
+        "order": 1,
+        "title": "What is Programming?",
+        "objective": "Understand what programming is and why it matters in everyday life.",
+        "explanation": "Programming is simply giving instructions to a computer. Computers are incredibly fast and precise — but they need very clear, step-by-step instructions to do anything useful.\n\nThink of programming as writing a recipe for a computer. A recipe tells a chef exactly what to do: gather ingredients, mix them in the right order, apply heat, and serve. A program tells a computer exactly what to do: receive input, process it, and produce output.\n\nPython is one of the best first languages to learn because its syntax reads almost like English. You don't need to memorize dozens of symbols or complex rules to get started.",
+        "analogy": "Imagine you have a very obedient but very literal robot assistant. If you say \"make me a sandwich,\" the robot won't know what to do — it needs exact instructions: \"Take two slices of bread. Spread butter on one side of each. Place a slice of cheese on one piece. Press them together.\" Programming is writing those exact instructions — but for a computer instead of a robot.",
+        "exampleCode": "# This is my first Python program\nprint(\"Hello, World!\")\nprint(\"I am learning Python!\")\nprint(\"Programming is fun.\")",
+        "lineByLine": [
+          {
+            "line": "# This is my first Python program",
+            "explanation": "This is a comment. Python ignores anything after #. Comments help humans understand the code."
+          },
+          {
+            "line": "print(\"Hello, World!\")",
+            "explanation": "Calls the print() function to display the text \"Hello, World!\" on the screen."
+          },
+          {
+            "line": "print(\"I am learning Python!\")",
+            "explanation": "Displays another line of text."
+          },
+          {
+            "line": "print(\"Programming is fun.\")",
+            "explanation": "Displays a third line. Each print() starts on a new line."
+          }
+        ],
+        "expectedOutput": "Hello, World!\nI am learning Python!\nProgramming is fun.",
+        "syntax": "print(\"your text here\")",
+        "starterCode": "# Write your first Python program!\n# Use print() to display your name and favorite hobby.\n# Example: print(\"My name is Alex\")\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "print(\"Hello\"",
+            "explanation": "Missing the closing parenthesis. Python needs matching ( and ) for every function call.",
+            "fix": "print(\"Hello\")"
+          },
+          {
+            "mistake": "Print(\"Hello\")",
+            "explanation": "Python is case-sensitive. \"Print\" with a capital P is not the same as \"print\" with a lowercase p.",
+            "fix": "print(\"Hello\")"
+          },
+          {
+            "mistake": "print('Hello\")",
+            "explanation": "Mixing quote types. Start and end strings with the same type of quote.",
+            "fix": "print(\"Hello\") or print('Hello')"
+          }
+        ],
+        "prerequisites": [],
+        "estimatedMinutes": 10,
+        "tags": [
+          "print",
+          "basics",
+          "introduction"
+        ],
+        "exercise": {
+          "id": "ex-1-1",
+          "title": "Personal Introduction",
+          "description": "Write a Python program that prints your name, your age, and your favorite subject — each on a separate line.",
+          "difficulty": "beginner",
+          "starterCode": "# Print your name, age, and favorite subject\n# Each on its own line using print()\n\n",
+          "solution": "print(\"My name is Alex\")\nprint(\"I am 20 years old\")\nprint(\"My favorite subject is Python\")",
+          "hints": [
+            "Use the print() function for each piece of information.",
+            "Put your text inside quotation marks: print(\"your text\").",
+            "You need three separate print() statements, one for each piece of information."
+          ],
+          "testCases": [
+            {
+              "id": "tc-1-1-1",
+              "description": "Program should output at least 3 lines",
+              "type": "contains",
+              "expectedOutput": "\n"
+            }
+          ],
+          "concepts": [
+            "print",
+            "strings"
+          ]
+        }
+      },
+      {
+        "id": "lesson-1-2",
+        "moduleId": "module-1",
+        "order": 2,
+        "title": "Understanding print() and Comments",
+        "objective": "Use print() to display text and numbers, and write comments to explain your code.",
+        "explanation": "The print() function is your main tool for showing output. You can print text (called strings), numbers, and much more.\n\n**Strings** are pieces of text. Always wrap them in quotes — either single quotes ('hello') or double quotes (\"hello\"). Both work the same way.\n\n**Comments** start with a # symbol. Python completely ignores comments when running your code. Comments exist only for humans — they explain what the code does. Good programmers always write comments.\n\nYou can also print multiple things in one line by separating them with commas.",
+        "analogy": "Comments are like sticky notes you put on your code. When you hand your recipe to someone else, your sticky notes help them understand why you added a pinch of salt at step 3. Python ignores them when cooking, but people find them incredibly helpful.",
+        "exampleCode": "# Printing text (strings)\nprint(\"Hello, World!\")\n\n# Printing numbers\nprint(42)\nprint(3.14)\n\n# Printing multiple things on one line\nprint(\"My age is\", 25)\nprint(\"Pi is approximately\", 3.14159)\n\n# A comment explaining the next line\nprint(\"Python is awesome!\")  # This prints on its own line",
+        "lineByLine": [
+          {
+            "line": "# Printing text (strings)",
+            "explanation": "A comment — Python ignores this line."
+          },
+          {
+            "line": "print(\"Hello, World!\")",
+            "explanation": "Prints the string \"Hello, World!\" to the screen."
+          },
+          {
+            "line": "print(42)",
+            "explanation": "Prints the number 42. Notice: no quotes needed for numbers."
+          },
+          {
+            "line": "print(3.14)",
+            "explanation": "Prints a decimal number (called a float)."
+          },
+          {
+            "line": "print(\"My age is\", 25)",
+            "explanation": "Prints text and a number together. The comma adds a space between them."
+          },
+          {
+            "line": "print(\"Python is awesome!\")  # This prints on its own line",
+            "explanation": "You can add a comment at the end of a line of code too."
+          }
+        ],
+        "expectedOutput": "Hello, World!\n42\n3.14\nMy age is 25\nPi is approximately 3.14159\nPython is awesome!",
+        "syntax": "print(\"text\")           # print a string\nprint(42)               # print a number\nprint(\"text\", number)   # print multiple values\n# This is a comment",
+        "starterCode": "# Practice using print() with different types of data\n# 1. Print a greeting message\n# 2. Print your favorite number\n# 3. Print both your name and age on one line using a comma\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "print(Hello)",
+            "explanation": "Hello without quotes is treated as a variable name, not text. If a variable called Hello doesn't exist, Python will throw an error.",
+            "fix": "print(\"Hello\") — always use quotes around text."
+          },
+          {
+            "mistake": "#print(\"Hello\")",
+            "explanation": "If you put # at the start of a print() line, Python treats the whole line as a comment and skips it.",
+            "fix": "Remove the # to make the code run: print(\"Hello\")"
+          }
+        ],
+        "prerequisites": [
+          "lesson-1-1"
+        ],
+        "estimatedMinutes": 12,
+        "tags": [
+          "print",
+          "comments",
+          "strings",
+          "numbers"
+        ],
+        "exercise": {
+          "id": "ex-1-2",
+          "title": "Print Variety",
+          "description": "Write a program that:\n1. Prints the text \"Learning Python is great!\"\n2. Prints the number 2024\n3. Prints your name and birth year on one line (separated by a comma in print)",
+          "difficulty": "beginner",
+          "starterCode": "# Complete the three tasks using print()\n# Task 1 \"Learning Python is great!\"\n\n# Task 2 the number 2024\n\n# Task 3 your name and birth year on one line\n\n",
+          "solution": "print(\"Learning Python is great!\")\nprint(2024)\nprint(\"Alex\", 2004)",
+          "hints": [
+            "For task 1, make sure to put the text inside quotes.",
+            "For task 2, numbers don't need quotes: print(2024).",
+            "For task 3, use a comma to print two values: print(\"Name\", year)."
+          ],
+          "testCases": [
+            {
+              "id": "tc-1-2-1",
+              "description": "Should print \"Learning Python is great!\"",
+              "type": "contains",
+              "expectedOutput": "Learning Python is great!"
+            },
+            {
+              "id": "tc-1-2-2",
+              "description": "Should print the number 2024",
+              "type": "contains",
+              "expectedOutput": "2024"
+            }
+          ],
+          "concepts": [
+            "print",
+            "strings",
+            "numbers",
+            "comments"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-2",
+    "order": 2,
+    "title": "Variables and Data Types",
+    "description": "Store and work with different types of data using variables.",
+    "icon": "📦",
+    "color": "#8b5cf6",
+    "quiz": [
+      {
+        "id": "q2-1",
+        "type": "multiple-choice",
+        "question": "Which of the following is a valid variable name in Python?",
+        "options": [
+          "2name",
+          "my-name",
+          "my_name",
+          "my name"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Variable names cannot start with a digit, cannot contain hyphens (which Python reads as minus), and cannot contain spaces. Underscores are fine!"
+      },
+      {
+        "id": "q2-2",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "x = 10\ny = 3\nprint(x + y)",
+        "options": [
+          "x + y",
+          "10 + 3",
+          "13",
+          "103"
+        ],
+        "correctAnswer": 2,
+        "explanation": "x holds the value 10 and y holds 3. x + y adds them together to get 13."
+      },
+      {
+        "id": "q2-3",
+        "type": "find-error",
+        "question": "What is wrong with this code?",
+        "code": "age = input(\"Enter age: \")\nnew_age = age + 1\nprint(new_age)",
+        "options": [
+          "input() is spelled wrong",
+          "age + 1 is wrong because input() returns a string, not a number",
+          "print() needs quotes",
+          "Nothing is wrong"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The input() function always returns a string (text), even if the user types a number. To do arithmetic, you must convert it: int(input(\"Enter age: \"))."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-2-1",
+        "moduleId": "module-2",
+        "order": 1,
+        "title": "What are Variables?",
+        "objective": "Create variables to store different types of data and use them in your programs.",
+        "explanation": "A **variable** is a named storage container that holds a value. Think of it as a labeled box where you can store information.\n\nIn Python, you create a variable simply by giving it a name and assigning a value using the = sign:\n\n```python\nname = \"Alice\"\nage = 25\nheight = 5.7\n```\n\nNow, whenever you use the variable name in your code, Python substitutes the value stored inside it.\n\n**Variable naming rules:**\n- Use only letters, numbers, and underscores (_)\n- Must start with a letter or underscore (not a number)\n- No spaces — use_underscores_instead\n- Case-sensitive: name and Name are different variables\n- Avoid Python keywords like if, for, while, print",
+        "analogy": "A variable is like a labeled jar on your kitchen shelf. You write \"sugar\" on the outside and put sugar inside. Whenever a recipe says \"add sugar,\" you know exactly which jar to grab. You can also empty the jar and refill it with something else — that's called reassigning a variable.",
+        "exampleCode": "# Creating variables\nname = \"Alice\"\nage = 25\nheight = 5.7\nis_student = True\n\n# Using variables\nprint(\"Name:\", name)\nprint(\"Age:\", age)\nprint(\"Height:\", height)\nprint(\"Is student:\", is_student)\n\n# Updating a variable\nage = 26\nprint(\"New age:\", age)",
+        "lineByLine": [
+          {
+            "line": "name = \"Alice\"",
+            "explanation": "Creates a variable called name and stores the text \"Alice\" in it."
+          },
+          {
+            "line": "age = 25",
+            "explanation": "Creates a variable called age and stores the number 25."
+          },
+          {
+            "line": "height = 5.7",
+            "explanation": "Creates a variable called height and stores the decimal number 5.7."
+          },
+          {
+            "line": "is_student = True",
+            "explanation": "Creates a variable called is_student and stores True (a boolean value)."
+          },
+          {
+            "line": "print(\"Name:\", name)",
+            "explanation": "Prints the text \"Name:\" followed by the value stored in the name variable."
+          },
+          {
+            "line": "age = 26",
+            "explanation": "Reassigns the age variable — now it holds 26 instead of 25."
+          }
+        ],
+        "expectedOutput": "Name: Alice\nAge: 25\nHeight: 5.7\nIs student: True\nNew age: 26",
+        "syntax": "variable_name = value\n\n# Examples\nname = \"Alice\"     # string\nage = 25           # integer\nheight = 5.7       # float\nis_happy = True    # boolean",
+        "starterCode": "# Create variables for your personal information\n# Then print each variable\n\nname = \"\"      # Replace \"\" with your name\nage =          # Replace with your age (no quotes needed for numbers)\ncity = \"\"      # Replace with your city name\n\n# Print all three variables using print()\n",
+        "commonMistakes": [
+          {
+            "mistake": "2name = \"Alice\"",
+            "explanation": "Variable names cannot start with a digit. Python will show a SyntaxError.",
+            "fix": "Use a letter or underscore first: name2 = \"Alice\" or person_name = \"Alice\""
+          },
+          {
+            "mistake": "my name = \"Alice\"",
+            "explanation": "Variable names cannot contain spaces. Python reads \"my\" and \"name\" as two separate things.",
+            "fix": "Use an underscore: my_name = \"Alice\""
+          },
+          {
+            "mistake": "Name = \"Alice\"\nprint(name)",
+            "explanation": "Python is case-sensitive. \"Name\" and \"name\" are two different variables.",
+            "fix": "Use the same capitalization consistently: name = \"Alice\" and print(name)"
+          }
+        ],
+        "prerequisites": [
+          "lesson-1-2"
+        ],
+        "estimatedMinutes": 15,
+        "tags": [
+          "variables",
+          "assignment",
+          "data types"
+        ],
+        "exercise": {
+          "id": "ex-2-1",
+          "title": "Store and Display Information",
+          "description": "Create a program that:\n1. Creates a variable called `city` with the value \"Mumbai\"\n2. Creates a variable called `population` with the value 20000000\n3. Prints both variables in a sentence like: \"Mumbai has a population of 20000000\"",
+          "difficulty": "beginner",
+          "starterCode": "# Create variables and print them in a sentence\ncity = \npopulation = \n\nprint(city, \"has a population of\", population)",
+          "solution": "city = \"Mumbai\"\npopulation = 20000000\n\nprint(city, \"has a population of\", population)",
+          "hints": [
+            "City is a text value — wrap it in quotes: city = \"Mumbai\"",
+            "Population is a number — no quotes needed: population = 20000000",
+            "Use print() with commas to combine text and variables: print(city, \"has a population of\", population)"
+          ],
+          "testCases": [
+            {
+              "id": "tc-2-1-1",
+              "description": "Output should contain \"Mumbai\"",
+              "type": "contains",
+              "expectedOutput": "Mumbai"
+            },
+            {
+              "id": "tc-2-1-2",
+              "description": "Output should contain \"20000000\"",
+              "type": "contains",
+              "expectedOutput": "20000000"
+            }
+          ],
+          "concepts": [
+            "variables",
+            "strings",
+            "integers",
+            "print"
+          ]
+        }
+      },
+      {
+        "id": "lesson-2-2",
+        "moduleId": "module-2",
+        "order": 2,
+        "title": "Data Types: int, float, str, bool",
+        "objective": "Identify and use Python's four basic data types and convert between them.",
+        "explanation": "Python has four basic data types you'll use constantly:\n\n**Integer (int)** — Whole numbers, positive or negative.\n```python\nage = 25\ntemperature = -10\n```\n\n**Float (float)** — Decimal numbers.\n```python\nprice = 9.99\npi = 3.14159\n```\n\n**String (str)** — Text. Always enclosed in quotes.\n```python\nname = \"Alice\"\ngreeting = 'Hello!'\n```\n\n**Boolean (bool)** — Either True or False (exactly like that, capital first letter).\n```python\nis_raining = False\nis_logged_in = True\n```\n\nYou can check a variable's type using type():\n```python\nprint(type(42))       # <class 'int'>\nprint(type(\"Hello\"))  # <class 'str'>\n```\n\n**Type conversion** lets you change one type to another:\n```python\nint(\"42\")     # converts string \"42\" to integer 42\nfloat(\"3.14\") # converts string to float\nstr(100)      # converts number to string \"100\"\n```",
+        "analogy": "Data types are like different kinds of containers. A glass holds liquids (floats and ints — numbers). A book holds text (strings). A light switch is either on or off (booleans — True or False). You wouldn't store milk in a book, and you can't flip a glass like a switch — each container has a specific purpose.",
+        "exampleCode": "# The four basic data types\nage = 25           # int\nprice = 4.99       # float\nname = \"Bob\"       # str\nis_happy = True    # bool\n\n# Checking types\nprint(type(age))       # <class 'int'>\nprint(type(price))     # <class 'float'>\nprint(type(name))      # <class 'str'>\nprint(type(is_happy))  # <class 'bool'>\n\n# Type conversion\ntext_number = \"42\"\nactual_number = int(text_number)   # now it's an integer\nprint(actual_number + 8)           # outputs 50\n\nnumber = 100\ntext = str(number)                 # now it's a string\nprint(\"The number is \" + text)     # outputs number is 100",
+        "lineByLine": [
+          {
+            "line": "age = 25",
+            "explanation": "Stores the integer 25 in age."
+          },
+          {
+            "line": "price = 4.99",
+            "explanation": "Stores the float 4.99 in price."
+          },
+          {
+            "line": "name = \"Bob\"",
+            "explanation": "Stores the string \"Bob\" in name."
+          },
+          {
+            "line": "is_happy = True",
+            "explanation": "Stores the boolean True in is_happy."
+          },
+          {
+            "line": "print(type(age))",
+            "explanation": "type() returns the data type of a variable. For 25, it shows <class 'int'>."
+          },
+          {
+            "line": "actual_number = int(text_number)",
+            "explanation": "int() converts the string \"42\" to the integer 42. Now you can do math with it."
+          },
+          {
+            "line": "print(\"The number is \" + text)",
+            "explanation": "Once number is converted to a string with str(), you can combine it with other text using +."
+          }
+        ],
+        "expectedOutput": "<class 'int'>\n<class 'float'>\n<class 'str'>\n<class 'bool'>\n50\nThe number is 100",
+        "syntax": "# Type checking\ntype(variable)\n\n# Type conversion\nint(value)    # to integer\nfloat(value)  # to float  \nstr(value)    # to string\nbool(value)   # to boolean",
+        "starterCode": "# Experiment with data types\nx = 10\ny = \"20\"\n\n# Try to add x and y directly — what happens?\n# Fix it by converting y to an integer first\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "print(\"My score is \" + 95)",
+            "explanation": "You cannot use + to combine a string and a number directly. Python doesn't know if you want to add or concatenate.",
+            "fix": "print(\"My score is \" + str(95)) or print(\"My score is\", 95)"
+          },
+          {
+            "mistake": "int(\"hello\")",
+            "explanation": "\"hello\" cannot be converted to an integer because it isn't a number. Python will throw a ValueError.",
+            "fix": "Only convert strings that actually contain numbers: int(\"42\")"
+          }
+        ],
+        "prerequisites": [
+          "lesson-2-1"
+        ],
+        "estimatedMinutes": 20,
+        "tags": [
+          "data types",
+          "int",
+          "float",
+          "string",
+          "bool",
+          "type conversion"
+        ],
+        "exercise": {
+          "id": "ex-2-2",
+          "title": "Type Detective",
+          "description": "Write a program that:\n1. Creates variables: score = \"95\", discount = \"10.5\", passed = \"True\"\n2. Converts score to an integer\n3. Converts discount to a float\n4. Prints the sum: score + 5 (should be 100)\n5. Prints the type of each converted variable",
+          "difficulty": "easy",
+          "starterCode": "# Start with string versions\nscore = \"95\"\ndiscount = \"10.5\"\n\n# Convert score to integer and add 5\nscore_int = \nprint(\"Score + 5 =\", score_int + 5)\n\n# Convert discount to float\ndiscount_float = \nprint(\"Discount:\", discount_float)\n\n# Print the types\nprint(type(score_int))\nprint(type(discount_float))",
+          "solution": "score = \"95\"\ndiscount = \"10.5\"\n\nscore_int = int(score)\nprint(\"Score + 5 =\", score_int + 5)\n\ndiscount_float = float(discount)\nprint(\"Discount:\", discount_float)\n\nprint(type(score_int))\nprint(type(discount_float))",
+          "hints": [
+            "Use int() to convert score: score_int = int(score)",
+            "Use float() to convert discount: discount_float = float(discount)",
+            "Once converted, you can do arithmetic: score_int + 5"
+          ],
+          "testCases": [
+            {
+              "id": "tc-2-2-1",
+              "description": "Score + 5 should equal 100",
+              "type": "contains",
+              "expectedOutput": "100"
+            },
+            {
+              "id": "tc-2-2-2",
+              "description": "Should show int type",
+              "type": "contains",
+              "expectedOutput": "<class 'int'>"
+            }
+          ],
+          "concepts": [
+            "type conversion",
+            "int",
+            "float",
+            "type()"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-3",
+    "order": 3,
+    "title": "Operators",
+    "description": "Perform calculations and comparisons using Python operators.",
+    "icon": "➕",
+    "color": "#10b981",
+    "quiz": [
+      {
+        "id": "q3-1",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "print(10 // 3)\nprint(10 % 3)",
+        "options": [
+          "3.33\n1",
+          "3\n1",
+          "3.33\n3",
+          "3\n3"
+        ],
+        "correctAnswer": 1,
+        "explanation": "// is floor division (gives the whole number result): 10 // 3 = 3. % is modulus (gives the remainder): 10 % 3 = 1 (because 3*3=9, remainder is 1)."
+      },
+      {
+        "id": "q3-2",
+        "type": "multiple-choice",
+        "question": "What is the result of 2 ** 8 in Python?",
+        "options": [
+          "16",
+          "256",
+          "128",
+          "28"
+        ],
+        "correctAnswer": 1,
+        "explanation": "** is the exponentiation operator. 2 ** 8 means 2 to the power of 8, which equals 256."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-3-1",
+        "moduleId": "module-3",
+        "order": 1,
+        "title": "Arithmetic and Comparison Operators",
+        "objective": "Perform calculations and compare values using Python operators.",
+        "explanation": "**Arithmetic operators** let you do math in Python:\n\n| Operator | Meaning | Example | Result |\n|----------|---------|---------|--------|\n| + | Addition | 5 + 3 | 8 |\n| - | Subtraction | 10 - 4 | 6 |\n| * | Multiplication | 3 * 7 | 21 |\n| / | Division | 15 / 4 | 3.75 |\n| // | Floor division | 15 // 4 | 3 |\n| % | Modulus (remainder) | 15 % 4 | 3 |\n| ** | Exponentiation | 2 ** 10 | 1024 |\n\n**Comparison operators** compare two values and return True or False:\n\n| Operator | Meaning | Example | Result |\n|----------|---------|---------|--------|\n| == | Equal to | 5 == 5 | True |\n| != | Not equal to | 5 != 3 | True |\n| > | Greater than | 7 > 3 | True |\n| < | Less than | 2 < 8 | True |\n| >= | Greater than or equal | 5 >= 5 | True |\n| <= | Less than or equal | 4 <= 6 | True |",
+        "analogy": "Arithmetic operators are the math operations you learned in school — plus, minus, times, divide. Comparison operators are like questions: \"Is 5 bigger than 3?\" Python answers with True or False, just like you'd answer Yes or No.",
+        "exampleCode": "# Arithmetic operators\na = 15\nb = 4\n\nprint(\"Addition:\", a + b)       # 19\nprint(\"Subtraction:\", a - b)    # 11\nprint(\"Multiplication:\", a * b) # 60\nprint(\"Division:\", a / b)       # 3.75\nprint(\"Floor division:\", a // b)# 3\nprint(\"Remainder:\", a % b)      # 3\nprint(\"Power:\", a ** 2)         # 225\n\n# Comparison operators\nx = 10\ny = 20\n\nprint(x == y)   # False (10 is not equal to 20)\nprint(x != y)   # True  (10 is not equal to 20)\nprint(x < y)    # True  (10 is less than 20)\nprint(x >= 10)  # True  (10 is equal to 10)",
+        "lineByLine": [
+          {
+            "line": "a = 15\nb = 4",
+            "explanation": "Store two numbers in variables a and b."
+          },
+          {
+            "line": "print(\"Division:\", a / b)",
+            "explanation": "/ always gives a float result: 15 / 4 = 3.75."
+          },
+          {
+            "line": "print(\"Floor division:\", a // b)",
+            "explanation": "// discards the decimal and gives only the whole number: 15 // 4 = 3."
+          },
+          {
+            "line": "print(\"Remainder:\", a % b)",
+            "explanation": "% gives the leftover after dividing: 15 = 4*3 + 3, so the remainder is 3."
+          },
+          {
+            "line": "print(x == y)",
+            "explanation": "== checks equality. 10 is not equal to 20, so this is False. Note: == is comparison, = is assignment!"
+          }
+        ],
+        "expectedOutput": "Addition: 19\nSubtraction: 11\nMultiplication: 60\nDivision: 3.75\nFloor division: 3\nRemainder: 3\nPower: 225\nFalse\nTrue\nTrue\nTrue",
+        "syntax": "# Arithmetic\nresult = a + b  # add\nresult = a - b  # subtract\nresult = a * b  # multiply\nresult = a / b  # divide (float)\nresult = a // b # floor divide\nresult = a % b  # remainder\nresult = a ** b # power\n\n# Comparison (returns True or False)\na == b   # equal\na != b   # not equal\na > b    # greater than\na < b    # less than\na >= b   # greater or equal\na <= b   # less or equal",
+        "starterCode": "# Calculate the following:\n# 1. What is 17 divided by 5 (regular division)?\n# 2. How many times does 5 go into 17 (floor division)?\n# 3. What is the remainder when 17 is divided by 5?\n# 4. Is 17 greater than 10?\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "if x = 5:",
+            "explanation": "Inside comparisons, use == (double equals) to check equality. Single = is for assignment.",
+            "fix": "if x == 5:"
+          },
+          {
+            "mistake": "print(10 / 0)",
+            "explanation": "Division by zero is not allowed in Python. This will cause a ZeroDivisionError.",
+            "fix": "Always check that the divisor is not zero before dividing."
+          }
+        ],
+        "prerequisites": [
+          "lesson-2-2"
+        ],
+        "estimatedMinutes": 18,
+        "tags": [
+          "arithmetic",
+          "comparison",
+          "operators",
+          "math"
+        ],
+        "exercise": {
+          "id": "ex-3-1",
+          "title": "Simple Calculator",
+          "description": "Write a program that:\n1. Stores two numbers: a = 17 and b = 5\n2. Prints the result of all 7 arithmetic operations\n3. Checks and prints: is a greater than b? is a equal to b?",
+          "difficulty": "easy",
+          "starterCode": "a = 17\nb = 5\n\n# Print all arithmetic results\nprint(\"a + b =\", a + b)\n# Add the remaining 6 operations below:\n\n\n\n\n# Compare a and b\nprint(\"a > b:\", )\nprint(\"a == b:\", )",
+          "solution": "a = 17\nb = 5\n\nprint(\"a + b =\", a + b)\nprint(\"a - b =\", a - b)\nprint(\"a * b =\", a * b)\nprint(\"a / b =\", a / b)\nprint(\"a // b =\", a // b)\nprint(\"a % b =\", a % b)\nprint(\"a ** b =\", a ** b)\n\nprint(\"a > b:\", a > b)\nprint(\"a == b:\", a == b)",
+          "hints": [
+            "For subtraction use -, for multiplication use *, for division use /.",
+            "For floor division use //, for modulus use %, for power use **.",
+            "Comparison results are True or False: print(\"a > b:\", a > b)"
+          ],
+          "testCases": [
+            {
+              "id": "tc-3-1-1",
+              "description": "Should print 22 for addition",
+              "type": "contains",
+              "expectedOutput": "22"
+            },
+            {
+              "id": "tc-3-1-2",
+              "description": "Should print 3.4 for division",
+              "type": "contains",
+              "expectedOutput": "3.4"
+            },
+            {
+              "id": "tc-3-1-3",
+              "description": "Should print True for a > b",
+              "type": "contains",
+              "expectedOutput": "True"
+            }
+          ],
+          "concepts": [
+            "arithmetic operators",
+            "comparison operators"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-4",
+    "order": 4,
+    "title": "Conditional Statements",
+    "description": "Make decisions in your programs using if, elif, and else.",
+    "icon": "🔀",
+    "color": "#f59e0b",
+    "quiz": [
+      {
+        "id": "q4-1",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "score = 75\nif score >= 90:\n    print(\"A\")\nelif score >= 75:\n    print(\"B\")\nelse:\n    print(\"C\")",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "B\nC"
+        ],
+        "correctAnswer": 1,
+        "explanation": "score is 75. The first condition (score >= 90) is False. The second condition (score >= 75) is True, so \"B\" is printed. Once a condition is True, Python skips the remaining elif/else blocks."
+      },
+      {
+        "id": "q4-2",
+        "type": "find-error",
+        "question": "What is wrong with this code?",
+        "code": "age = 18\nif age >= 18\n    print(\"Adult\")",
+        "options": [
+          "age should be a string",
+          "Missing colon after the if condition",
+          "print needs double quotes",
+          "The indentation is wrong"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Python requires a colon (:) at the end of every if condition. The code should be: if age >= 18:"
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-4-1",
+        "moduleId": "module-4",
+        "order": 1,
+        "title": "if, elif, and else",
+        "objective": "Write programs that make decisions based on conditions using if, elif, and else.",
+        "explanation": "Conditional statements let your program make decisions. The most basic form is:\n\n```python\nif condition:\n    do something\n```\n\nIf the condition is True, Python runs the indented code below. If the condition is False, Python skips it.\n\nFor two options, use **else**:\n```python\nif condition:\n    do this if True\nelse:\n    do this if False\n```\n\nFor multiple options, use **elif** (short for \"else if\"):\n```python\nif condition1:\n    ...\nelif condition2:\n    ...\nelif condition3:\n    ...\nelse:\n    ...\n```\n\n**Critical rule:** The code inside an if/elif/else block must be **indented** (shifted right) by 4 spaces. Indentation is how Python knows which code belongs to which block.",
+        "analogy": "Conditional statements are like the decisions you make every morning. \"If it's raining, take an umbrella. Otherwise, if it's sunny, wear sunglasses. Otherwise, just wear a jacket.\" Your brain evaluates each condition and takes the first path that matches. Python does exactly the same thing.",
+        "exampleCode": "# Simple if\ntemperature = 35\nif temperature > 30:\n    print(\"It's hot today!\")\n\n# if-else\nscore = 65\nif score >= 50:\n    print(\"You passed!\")\nelse:\n    print(\"You need to study more.\")\n\n# if-elif-else\ngrade = 82\nif grade >= 90:\n    print(\"Grade: A\")\nelif grade >= 80:\n    print(\"Grade: B\")\nelif grade >= 70:\n    print(\"Grade: C\")\nelif grade >= 60:\n    print(\"Grade: D\")\nelse:\n    print(\"Grade: F\")",
+        "lineByLine": [
+          {
+            "line": "if temperature > 30:",
+            "explanation": "Checks if temperature is greater than 30. Note the colon (:) at the end — it is required!"
+          },
+          {
+            "line": "    print(\"It's hot today!\")",
+            "explanation": "This line is indented (4 spaces). It only runs when the condition above is True."
+          },
+          {
+            "line": "if score >= 50:",
+            "explanation": "Checks if score is 50 or more."
+          },
+          {
+            "line": "else:",
+            "explanation": "If the if condition was False, Python runs the code inside else instead."
+          },
+          {
+            "line": "elif grade >= 80:",
+            "explanation": "Only checked if the previous if condition was False. Python evaluates conditions top to bottom and stops at the first True one."
+          }
+        ],
+        "expectedOutput": "It's hot today!\nYou passed!\nGrade: B",
+        "syntax": "if condition:\n    # runs if condition is True\nelif another_condition:\n    # runs if this condition is True\nelse:\n    # runs if no condition above was True",
+        "starterCode": "# Check if a number is positive, negative, or zero\nnumber = 7\n\n# Write an if-elif-else to print:\n# \"Positive\" if number > 0\n# \"Negative\" if number < 0\n# \"Zero\" if number is exactly 0\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "if age >= 18\n    print(\"Adult\")",
+            "explanation": "Missing colon after the condition. Python requires : at the end of every if, elif, and else.",
+            "fix": "if age >= 18:"
+          },
+          {
+            "mistake": "if age >= 18:\nprint(\"Adult\")",
+            "explanation": "The print statement is not indented. Python uses indentation to group code inside the if block.",
+            "fix": "if age >= 18:\n    print(\"Adult\")  # 4 spaces of indentation"
+          },
+          {
+            "mistake": "if score = 90:",
+            "explanation": "Use == for comparison, not = (which is assignment). if score = 90 is a syntax error.",
+            "fix": "if score == 90:"
+          }
+        ],
+        "prerequisites": [
+          "lesson-3-1"
+        ],
+        "estimatedMinutes": 20,
+        "tags": [
+          "if",
+          "elif",
+          "else",
+          "conditions",
+          "indentation"
+        ],
+        "exercise": {
+          "id": "ex-4-1",
+          "title": "Age Category Checker",
+          "description": "Write a program that categorizes a person based on their age:\n- 0–12: \"Child\"\n- 13–17: \"Teenager\"\n- 18–64: \"Adult\"\n- 65+: \"Senior\"\n\nTest with age = 25.",
+          "difficulty": "easy",
+          "starterCode": "age = 25\n\n# Write your if-elif-else chain here\n",
+          "solution": "age = 25\n\nif age >= 65:\n    print(\"Senior\")\nelif age >= 18:\n    print(\"Adult\")\nelif age >= 13:\n    print(\"Teenager\")\nelse:\n    print(\"Child\")",
+          "hints": [
+            "Start with the highest value (65+) first, or start from the lowest — both work but be careful about the logic.",
+            "Remember to put a colon at the end of each if/elif/else: if age >= 65:",
+            "The code inside each block must be indented with 4 spaces."
+          ],
+          "testCases": [
+            {
+              "id": "tc-4-1-1",
+              "description": "Should print \"Adult\" for age 25",
+              "type": "contains",
+              "expectedOutput": "Adult"
+            }
+          ],
+          "concepts": [
+            "if",
+            "elif",
+            "else",
+            "comparison operators"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-5",
+    "order": 5,
+    "title": "Loops",
+    "description": "Repeat actions efficiently using for and while loops.",
+    "icon": "🔄",
+    "color": "#ef4444",
+    "quiz": [
+      {
+        "id": "q5-1",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "for i in range(1, 5):\n    print(i)",
+        "options": [
+          "1 2 3 4 5",
+          "1\n2\n3\n4",
+          "0\n1\n2\n3\n4",
+          "1\n2\n3\n4\n5"
+        ],
+        "correctAnswer": 1,
+        "explanation": "range(1, 5) generates numbers starting at 1 and stopping BEFORE 5, so it gives 1, 2, 3, 4. Each print is on its own line."
+      },
+      {
+        "id": "q5-2",
+        "type": "find-error",
+        "question": "This loop runs forever. How do you fix it?",
+        "code": "count = 0\nwhile count < 5:\n    print(count)",
+        "options": [
+          "Change while to for",
+          "Add count = count + 1 inside the loop",
+          "Change ",
+          "Remove the condition"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The loop condition (count < 5) never becomes False because count is never changed inside the loop. You must increment count: count += 1 (or count = count + 1)."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-5-1",
+        "moduleId": "module-5",
+        "order": 1,
+        "title": "for Loops and range()",
+        "objective": "Use for loops to repeat actions a specific number of times and iterate over sequences.",
+        "explanation": "A **loop** lets you repeat a block of code multiple times without writing it again and again.\n\nA **for loop** is perfect when you know how many times you want to repeat something.\n\n**Using range():**\n- `range(5)` → 0, 1, 2, 3, 4 (5 numbers starting from 0)\n- `range(1, 6)` → 1, 2, 3, 4, 5 (start at 1, stop before 6)\n- `range(0, 10, 2)` → 0, 2, 4, 6, 8 (start at 0, stop before 10, step by 2)\n\n**Iterating over a list:**\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(fruit)\n```\n\nThe variable after **for** (in this case, `fruit`) takes on each value in the sequence one at a time.",
+        "analogy": "A for loop is like stamping a passport at customs. For each traveler in the queue, you stamp their passport. You repeat the exact same action (stamp) for each item (traveler) until there are no more in the line.",
+        "exampleCode": "# Basic for loop with range\nprint(\"Counting from 1 to 5:\")\nfor i in range(1, 6):\n    print(i)\n\n# Loop with a step\nprint(\"\\nEven numbers from 0 to 10:\")\nfor i in range(0, 11, 2):\n    print(i)\n\n# Iterating over a list\nfruits = [\"apple\", \"banana\", \"cherry\"]\nprint(\"\\nFruits:\")\nfor fruit in fruits:\n    print(fruit)\n\n# Calculating a sum\ntotal = 0\nfor i in range(1, 6):\n    total = total + i\nprint(\"\\nSum of 1 to 5:\", total)",
+        "lineByLine": [
+          {
+            "line": "for i in range(1, 6):",
+            "explanation": "Creates a loop. i takes values 1, 2, 3, 4, 5 one at a time. range(1, 6) starts at 1 and stops before 6."
+          },
+          {
+            "line": "    print(i)",
+            "explanation": "Indented 4 spaces — runs inside the loop. Prints the current value of i each iteration."
+          },
+          {
+            "line": "for i in range(0, 11, 2):",
+            "explanation": "range(0, 11, 2) starts at 0, ends before 11, jumps by 2: 0, 2, 4, 6, 8, 10."
+          },
+          {
+            "line": "for fruit in fruits:",
+            "explanation": "fruit takes each value from the fruits list: \"apple\", then \"banana\", then \"cherry\"."
+          },
+          {
+            "line": "total = total + i",
+            "explanation": "Adds the current value of i to total each loop iteration. After the loop, total = 1+2+3+4+5 = 15."
+          }
+        ],
+        "expectedOutput": "Counting from 1 to 5:\n1\n2\n3\n4\n5\n\nEven numbers from 0 to 10:\n0\n2\n4\n6\n8\n10\n\nFruits:\napple\nbanana\ncherry\n\nSum of 1 to 5: 15",
+        "syntax": "# Loop a fixed number of times\nfor i in range(n):\n    # code to repeat\n\n# Loop through a sequence\nfor item in sequence:\n    # code using item\n\n# range with start, stop, step\nfor i in range(start, stop, step):\n    # code",
+        "starterCode": "# Task 1 the multiplication table of 7 (7x1 to 7x10)\n# Hint range(1, 11) and multiply each number by 7\n\n# Task 2 the sum of all numbers from 1 to 100\n# Hint a total variable and add each number to it in the loop\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "for i in range(1, 10):\nprint(i)",
+            "explanation": "The print(i) is not indented, so it's not part of the loop. Python will only run it once after the loop ends.",
+            "fix": "for i in range(1, 10):\n    print(i)  # indent with 4 spaces"
+          },
+          {
+            "mistake": "for i in range(10, 1):",
+            "explanation": "range(10, 1) is empty because Python counts up by default and 10 is already past 1. The loop won't run.",
+            "fix": "Use range(1, 11) to count from 1 to 10, or range(10, 0, -1) to count down."
+          }
+        ],
+        "prerequisites": [
+          "lesson-4-1"
+        ],
+        "estimatedMinutes": 22,
+        "tags": [
+          "for loop",
+          "range",
+          "iteration",
+          "loops"
+        ],
+        "exercise": {
+          "id": "ex-5-1",
+          "title": "Multiplication Table",
+          "description": "Write a program that prints the complete multiplication table for the number 5 (5×1=5 through 5×10=50). Each line should look like: \"5 x 1 = 5\"",
+          "difficulty": "easy",
+          "starterCode": "# Print the multiplication table of 5\n# Format: \"5 x 1 = 5\", \"5 x 2 = 10\", etc.\n\nfor i in range(1, 11):\n    result = 5 * i\n    print(\"5 x\", i, \"=\", result)",
+          "solution": "for i in range(1, 11):\n    result = 5 * i\n    print(\"5 x\", i, \"=\", result)",
+          "hints": [
+            "Use range(1, 11) to loop from 1 to 10.",
+            "Inside the loop, calculate: result = 5 * i",
+            "Print using: print(\"5 x\", i, \"=\", result)"
+          ],
+          "testCases": [
+            {
+              "id": "tc-5-1-1",
+              "description": "Should print \"5 x 1 = 5\"",
+              "type": "contains",
+              "expectedOutput": "5 x 1 = 5"
+            },
+            {
+              "id": "tc-5-1-2",
+              "description": "Should print \"5 x 10 = 50\"",
+              "type": "contains",
+              "expectedOutput": "5 x 10 = 50"
+            }
+          ],
+          "concepts": [
+            "for loop",
+            "range",
+            "arithmetic"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-6",
+    "order": 6,
+    "title": "Data Structures",
+    "description": "Organize and manage collections of data with lists, tuples, sets, and dictionaries.",
+    "icon": "🗂️",
+    "color": "#06b6d4",
+    "quiz": [
+      {
+        "id": "q6-1",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "nums = [10, 20, 30, 40, 50]\nprint(nums[1])\nprint(nums[-1])",
+        "options": [
+          "10\n50",
+          "20\n50",
+          "10\n40",
+          "20\n40"
+        ],
+        "correctAnswer": 1,
+        "explanation": "List indexing starts at 0, so nums[1] is the second element (20). Negative indexing counts from the end, so nums[-1] is the last element (50)."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-6-1",
+        "moduleId": "module-6",
+        "order": 1,
+        "title": "Lists",
+        "objective": "Create, modify, and iterate over Python lists to manage collections of data.",
+        "explanation": "A **list** is an ordered collection of items. Lists can hold any type of data, and items can be added, removed, or changed.\n\nCreate a list using square brackets:\n```python\nnumbers = [1, 2, 3, 4, 5]\nnames = [\"Alice\", \"Bob\", \"Charlie\"]\nmixed = [42, \"hello\", True, 3.14]\n```\n\n**Indexing** — access items by their position (starting from 0):\n```python\nnames[0]   # \"Alice\" (first item)\nnames[-1]  # \"Charlie\" (last item)\n```\n\n**Slicing** — get a portion of the list:\n```python\nnumbers[1:4]  # [2, 3, 4]\n```\n\n**Common list methods:**\n| Method | What it does |\n|--------|-------------|\n| append(x) | Add x to the end |\n| insert(i, x) | Insert x at position i |\n| remove(x) | Remove first occurrence of x |\n| pop() | Remove and return the last item |\n| sort() | Sort the list in place |\n| len(list) | Get the number of items |",
+        "analogy": "A list is like a numbered shopping list. You can have bread at position 1, milk at position 2, eggs at position 3. You can add new items, cross off items, or change \"bread\" to \"sourdough bread.\" The order matters — position 1 is always first.",
+        "exampleCode": "# Creating lists\nfruits = [\"apple\", \"banana\", \"cherry\"]\nscores = [85, 92, 78, 90, 88]\n\n# Accessing items\nprint(fruits[0])   # apple\nprint(fruits[-1])  # cherry\n\n# Slicing\nprint(scores[1:4]) # [92, 78, 90]\n\n# Modifying lists\nfruits.append(\"mango\")\nprint(fruits)       # ['apple', 'banana', 'cherry', 'mango']\n\nfruits.remove(\"banana\")\nprint(fruits)       # ['apple', 'cherry', 'mango']\n\n# Looping through a list\nprint(\"All scores:\")\nfor score in scores:\n    print(score)\n\n# Useful functions\nprint(\"Number of scores:\", len(scores))\nprint(\"Highest score:\", max(scores))\nprint(\"Lowest score:\", min(scores))\nprint(\"Total:\", sum(scores))",
+        "lineByLine": [
+          {
+            "line": "fruits = [\"apple\", \"banana\", \"cherry\"]",
+            "explanation": "Creates a list with 3 string items."
+          },
+          {
+            "line": "print(fruits[0])",
+            "explanation": "Index 0 is the first item. Lists start counting at 0, not 1."
+          },
+          {
+            "line": "print(fruits[-1])",
+            "explanation": "Negative index -1 always refers to the last item, regardless of list length."
+          },
+          {
+            "line": "print(scores[1:4])",
+            "explanation": "Slicing: takes items from index 1 up to (but not including) index 4."
+          },
+          {
+            "line": "fruits.append(\"mango\")",
+            "explanation": "append() adds a new item to the end of the list."
+          },
+          {
+            "line": "fruits.remove(\"banana\")",
+            "explanation": "remove() finds and removes the first occurrence of that value."
+          }
+        ],
+        "expectedOutput": "apple\ncherry\n[92, 78, 90]\n['apple', 'banana', 'cherry', 'mango']\n['apple', 'cherry', 'mango']\nAll scores:\n85\n92\n78\n90\n88\nNumber of scores: 5\nHighest score: 92\nLowest score: 78\nTotal: 433",
+        "syntax": "# Create\nmy_list = [item1, item2, item3]\n\n# Access\nmy_list[0]     # first item\nmy_list[-1]    # last item\nmy_list[1:3]   # items 1 and 2\n\n# Modify\nmy_list.append(item)        # add to end\nmy_list.insert(index, item) # add at position\nmy_list.remove(item)        # remove item\n\n# Info\nlen(my_list)   # count items\nmax(my_list)   # largest value\nmin(my_list)   # smallest value\nsum(my_list)   # sum (for numbers)",
+        "starterCode": "# Create a list of 5 of your favorite movies\nmovies = []  # Add 5 movie titles here\n\n# Print the first and last movie\n# Print the total number of movies\n# Add one more movie\n# Print the updated list\n",
+        "commonMistakes": [
+          {
+            "mistake": "my_list[5]  # for a list of 5 items",
+            "explanation": "A list with 5 items has indices 0, 1, 2, 3, 4. Index 5 does not exist, causing an IndexError.",
+            "fix": "The last valid index is len(my_list) - 1. Use my_list[-1] for the last item."
+          },
+          {
+            "mistake": "fruits.append[\"mango\"]",
+            "explanation": "append is a method called with parentheses (), not square brackets [].",
+            "fix": "fruits.append(\"mango\")"
+          }
+        ],
+        "prerequisites": [
+          "lesson-5-1"
+        ],
+        "estimatedMinutes": 25,
+        "tags": [
+          "list",
+          "indexing",
+          "slicing",
+          "append",
+          "iteration"
+        ],
+        "exercise": {
+          "id": "ex-6-1",
+          "title": "Grade Manager",
+          "description": "Write a program that:\n1. Creates a list of grades: [72, 88, 95, 61, 77, 84]\n2. Prints the highest grade\n3. Prints the lowest grade\n4. Calculates and prints the average grade\n5. Adds a new grade of 91 to the list\n6. Prints the new list length",
+          "difficulty": "easy",
+          "starterCode": "grades = [72, 88, 95, 61, 77, 84]\n\n# Print highest, lowest\nprint(\"Highest:\", max(grades))\nprint(\"Lowest:\", )\n\n# Calculate average (sum / count)\naverage = \nprint(\"Average:\", average)\n\n# Add 91 to the list\n\nprint(\"New count:\", )",
+          "solution": "grades = [72, 88, 95, 61, 77, 84]\n\nprint(\"Highest:\", max(grades))\nprint(\"Lowest:\", min(grades))\n\naverage = sum(grades) / len(grades)\nprint(\"Average:\", average)\n\ngrades.append(91)\nprint(\"New count:\", len(grades))",
+          "hints": [
+            "Use min(grades) for the lowest grade.",
+            "Average = sum(grades) / len(grades).",
+            "Use grades.append(91) to add a new grade."
+          ],
+          "testCases": [
+            {
+              "id": "tc-6-1-1",
+              "description": "Should print highest grade 95",
+              "type": "contains",
+              "expectedOutput": "Highest: 95"
+            },
+            {
+              "id": "tc-6-1-2",
+              "description": "Should print new count 7",
+              "type": "contains",
+              "expectedOutput": "7"
+            }
+          ],
+          "concepts": [
+            "list",
+            "max",
+            "min",
+            "sum",
+            "len",
+            "append"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-7",
+    "order": 7,
+    "title": "Strings",
+    "description": "Master text manipulation with Python's powerful string methods and formatting.",
+    "icon": "📝",
+    "color": "#ec4899",
+    "quiz": [
+      {
+        "id": "q7-1",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "name = \"python\"\nprint(name.upper())\nprint(name.capitalize())\nprint(len(name))",
+        "options": [
+          "PYTHON\nPython\n6",
+          "python\nPython\n6",
+          "PYTHON\nPYTHON\n6",
+          "PYTHON\nPython\n5"
+        ],
+        "correctAnswer": 0,
+        "explanation": "upper() converts all letters to uppercase (PYTHON). capitalize() makes only the first letter uppercase (Python). len(\"python\") counts 6 characters."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-7-1",
+        "moduleId": "module-7",
+        "order": 1,
+        "title": "String Methods and f-strings",
+        "objective": "Use string methods to manipulate text and f-strings to format output elegantly.",
+        "explanation": "Strings have many built-in methods that let you manipulate text without writing complex code.\n\n**Common string methods:**\n| Method | What it does | Example |\n|--------|-------------|---------|\n| upper() | All uppercase | \"hello\".upper() → \"HELLO\" |\n| lower() | All lowercase | \"HELLO\".lower() → \"hello\" |\n| capitalize() | First letter uppercase | \"hello world\".capitalize() → \"Hello world\" |\n| strip() | Remove leading/trailing spaces | \"  hi  \".strip() → \"hi\" |\n| replace(a,b) | Replace text | \"hello\".replace(\"l\",\"r\") → \"herro\" |\n| split(sep) | Split into a list | \"a,b,c\".split(\",\") → [\"a\",\"b\",\"c\"] |\n| find(sub) | Find substring position | \"hello\".find(\"ll\") → 2 |\n| startswith(s) | Check prefix | \"hello\".startswith(\"he\") → True |\n\n**f-strings** (formatted string literals) are the modern, clean way to embed variables in strings:\n```python\nname = \"Alice\"\nage = 25\nprint(f\"My name is {name} and I am {age} years old.\")\n```\n\nThe f before the quote makes it an f-string. Inside `{}`, you can put any variable or expression.",
+        "analogy": "String methods are like word-processing tools. upper() is like pressing Caps Lock. strip() is like the \"Trim whitespace\" button. replace() is like Find & Replace. f-strings are like a form letter where you fill in the blanks: \"Dear {name}, your order {order_id} has shipped.\"",
+        "exampleCode": "# String methods\nmessage = \"  Hello, Python World!  \"\nprint(message.strip())          # removes extra spaces\nprint(message.strip().lower())  # all lowercase\nprint(message.strip().upper())  # all uppercase\n\ntext = \"banana\"\nprint(text.replace(\"a\", \"o\"))  # bononono\nprint(text.find(\"nan\"))        # 1 (index of \"nan\")\nprint(text.count(\"a\"))         # 3\n\n# Splitting a string\ncsv = \"Alice,Bob,Charlie,Diana\"\nnames = csv.split(\",\")\nprint(names)                    # ['Alice', 'Bob', 'Charlie', 'Diana']\n\n# f-strings (best way to format output)\nname = \"Alice\"\nage = 28\nscore = 92.5\nprint(f\"Name: {name}\")\nprint(f\"{name} is {age} years old\")\nprint(f\"Score: {score:.1f}%\")   # 1 decimal place",
+        "lineByLine": [
+          {
+            "line": "print(message.strip())",
+            "explanation": "strip() removes leading and trailing whitespace (spaces, tabs, newlines)."
+          },
+          {
+            "line": "print(text.replace(\"a\", \"o\"))",
+            "explanation": "Replaces every \"a\" with \"o\" in the string."
+          },
+          {
+            "line": "names = csv.split(\",\")",
+            "explanation": "Splits the string at every comma, creating a list of substrings."
+          },
+          {
+            "line": "print(f\"Name: {name}\")",
+            "explanation": "f-string: the f before the quote enables variable embedding. {name} is replaced with the value of name."
+          },
+          {
+            "line": "print(f\"Score: {score:.1f}%\")",
+            "explanation": ":.1f formats the number with exactly 1 decimal place."
+          }
+        ],
+        "expectedOutput": "Hello, Python World!\nhello, python world!\nHELLO, PYTHON WORLD!\nbononono\n1\n3\n['Alice', 'Bob', 'Charlie', 'Diana']\nName: Alice\nAlice is 28 years old\nScore: 92.5%",
+        "syntax": "# String methods\ntext.upper()\ntext.lower()\ntext.strip()\ntext.replace(old, new)\ntext.split(separator)\ntext.find(substring)\n\n# f-strings\nf\"Hello, {variable}\"\nf\"Value: {expression:.2f}\"",
+        "starterCode": "# Practice string methods and f-strings\nsentence = \"  the quick brown fox  \"\n\n# 1. Print the sentence without extra spaces\n# 2. Print it in UPPERCASE\n# 3. Count how many times the letter 'o' appears\n# 4. Replace \"fox\" with \"cat\"\n# 5. Use an f-string to print: \"Word count: X\" where X is the number of words\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "\"hello\".Upper()",
+            "explanation": "Python string methods are lowercase. Upper() with a capital U does not exist.",
+            "fix": "\"hello\".upper()"
+          },
+          {
+            "mistake": "print(f\"Hello, name\")",
+            "explanation": "Without curly braces, the variable name is not substituted — Python prints the literal text \"name\".",
+            "fix": "print(f\"Hello, {name}\") — curly braces mark where to insert the variable"
+          }
+        ],
+        "prerequisites": [
+          "lesson-6-1"
+        ],
+        "estimatedMinutes": 20,
+        "tags": [
+          "strings",
+          "methods",
+          "f-strings",
+          "formatting"
+        ],
+        "exercise": {
+          "id": "ex-7-1",
+          "title": "Name Formatter",
+          "description": "Write a program that:\n1. Takes the string: \"  alice smith  \"\n2. Strips whitespace\n3. Converts to title case (capitalize first letter of each word — use .title())\n4. Uses an f-string to print: \"Full name Smith\" and \"Characters: 11\"",
+          "difficulty": "easy",
+          "starterCode": "raw_name = \"  alice smith  \"\n\n# Strip whitespace\nclean_name = raw_name.strip()\n\n# Convert to title case\nformatted = \n\n# Print using f-strings\nprint(f\"Full name: {formatted}\")\nprint(f\"Characters: {len(formatted)}\")",
+          "solution": "raw_name = \"  alice smith  \"\nclean_name = raw_name.strip()\nformatted = clean_name.title()\nprint(f\"Full name: {formatted}\")\nprint(f\"Characters: {len(formatted)}\")",
+          "hints": [
+            "After stripping, use .title() to capitalize the first letter of each word.",
+            "len() works on strings too: len(\"Alice Smith\") returns 11.",
+            "f-strings: print(f\"Full name: {formatted}\")"
+          ],
+          "testCases": [
+            {
+              "id": "tc-7-1-1",
+              "description": "Should print \"Full name Smith\"",
+              "type": "contains",
+              "expectedOutput": "Full name Smith"
+            },
+            {
+              "id": "tc-7-1-2",
+              "description": "Should print \"Characters: 11\"",
+              "type": "contains",
+              "expectedOutput": "Characters: 11"
+            }
+          ],
+          "concepts": [
+            "strip",
+            "title",
+            "f-strings",
+            "len"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-8",
+    "order": 8,
+    "title": "Functions",
+    "description": "Write reusable, organized code with Python functions.",
+    "icon": "⚙️",
+    "color": "#7c3aed",
+    "quiz": [
+      {
+        "id": "q8-1",
+        "type": "predict-output",
+        "question": "What will this code output?",
+        "code": "def greet(name, greeting=\"Hello\"):\n    return f\"{greeting}, {name}!\"\n\nprint(greet(\"Alice\"))\nprint(greet(\"Bob\", \"Hi\"))",
+        "options": [
+          "Hello, Alice!\nHi, Bob!",
+          "greeting, name!\ngreeting, name!",
+          "Error",
+          "Hello, Alice\nHi, Bob"
+        ],
+        "correctAnswer": 0,
+        "explanation": "greet(\"Alice\") uses the default greeting \"Hello\". greet(\"Bob\", \"Hi\") overrides the default with \"Hi\". The f-string inserts the values."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-8-1",
+        "moduleId": "module-8",
+        "order": 1,
+        "title": "Defining and Calling Functions",
+        "objective": "Define functions with parameters and return values to write reusable code.",
+        "explanation": "A **function** is a named, reusable block of code that performs a specific task. Instead of repeating the same code in multiple places, you define it once in a function and call it whenever needed.\n\n**Defining a function:**\n```python\ndef function_name(parameters):\n    # code to execute\n    return result\n```\n\n**Calling a function:**\n```python\nresult = function_name(arguments)\n```\n\n**Key concepts:**\n- **Parameters** are placeholders in the function definition (like x and y in add(x, y)).\n- **Arguments** are the actual values you pass when calling (like add(3, 5)).\n- **return** sends a value back to wherever the function was called.\n- **Default parameters** provide fallback values: def greet(name, greeting=\"Hello\").\n- **Scope:** Variables created inside a function exist only inside it.",
+        "analogy": "A function is like a kitchen appliance. A toaster is defined once with instructions: \"insert bread, heat to 350°F for 2 minutes, pop up.\" Every time you want toast, you use (call) the toaster with different bread (arguments). You don't need to re-engineer a toaster each morning — it's defined once and reused endlessly.",
+        "exampleCode": "# Simple function\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")\ngreet(\"Bob\")\n\n# Function with return value\ndef add(x, y):\n    return x + y\n\nresult = add(3, 5)\nprint(\"Sum:\", result)\n\n# Function with default parameter\ndef power(base, exponent=2):\n    return base ** exponent\n\nprint(power(3))     # 9 (3 squared, default exponent)\nprint(power(2, 10)) # 1024 (2 to the 10th)\n\n# Function that processes a list\ndef get_average(numbers):\n    if len(numbers) == 0:\n        return 0\n    return sum(numbers) / len(numbers)\n\ngrades = [85, 90, 78, 92, 88]\nprint(f\"Class average: {get_average(grades):.1f}\")",
+        "lineByLine": [
+          {
+            "line": "def greet(name):",
+            "explanation": "def starts the function definition. greet is its name. name is a parameter (input placeholder). Colon required."
+          },
+          {
+            "line": "    print(f\"Hello, {name}!\")",
+            "explanation": "Indented body — runs when the function is called. name takes the value of the argument passed."
+          },
+          {
+            "line": "greet(\"Alice\")",
+            "explanation": "Calls the greet function with \"Alice\" as the argument. Inside the function, name = \"Alice\"."
+          },
+          {
+            "line": "def add(x, y):",
+            "explanation": "A function with two parameters: x and y."
+          },
+          {
+            "line": "    return x + y",
+            "explanation": "return sends the computed value back to the caller. result = add(3, 5) will give result = 8."
+          },
+          {
+            "line": "def power(base, exponent=2):",
+            "explanation": "exponent=2 is a default parameter. If no exponent is provided, it defaults to 2."
+          }
+        ],
+        "expectedOutput": "Hello, Alice!\nHello, Bob!\nSum: 8\n9\n1024\nClass average: 86.6",
+        "syntax": "def function_name(param1, param2, param3=default):\n    # function body\n    return value\n\n# Calling\nresult = function_name(arg1, arg2)",
+        "starterCode": "# Define a function called 'calculate_area' that:\n# - Takes two parameters: width and height\n# - Returns the area (width * height)\n# Then call it with width=8 and height=5 and print the result\n\n",
+        "commonMistakes": [
+          {
+            "mistake": "def my_function()\n    print(\"Hello\")",
+            "explanation": "Two mistakes: missing colon after (), and the body must be indented.",
+            "fix": "def my_function():\n    print(\"Hello\")"
+          },
+          {
+            "mistake": "result = my_function\nprint(result)",
+            "explanation": "Without parentheses, you're referencing the function itself, not calling it. result will be a function object, not its return value.",
+            "fix": "result = my_function()  # Always include () to call a function"
+          }
+        ],
+        "prerequisites": [
+          "lesson-6-1"
+        ],
+        "estimatedMinutes": 25,
+        "tags": [
+          "functions",
+          "def",
+          "parameters",
+          "return",
+          "scope"
+        ],
+        "exercise": {
+          "id": "ex-8-1",
+          "title": "Temperature Converter",
+          "description": "Write two functions:\n1. celsius_to_fahrenheit(c) that converts Celsius to Fahrenheit (formula: F = C * 9/5 + 32)\n2. fahrenheit_to_celsius(f) that converts Fahrenheit to Celsius (formula: C = (F - 32) * 5/9)\n\nTest: celsius_to_fahrenheit(100) should return 212.0\nTest: fahrenheit_to_celsius(32) should return 0.0",
+          "difficulty": "intermediate",
+          "starterCode": "def celsius_to_fahrenheit(c):\n    # Your code here\n    pass\n\ndef fahrenheit_to_celsius(f):\n    # Your code here\n    pass\n\n# Test your functions\nprint(celsius_to_fahrenheit(100))  # Should print 212.0\nprint(fahrenheit_to_celsius(32))   # Should print 0.0\nprint(celsius_to_fahrenheit(0))    # Should print 32.0",
+          "solution": "def celsius_to_fahrenheit(c):\n    return c * 9/5 + 32\n\ndef fahrenheit_to_celsius(f):\n    return (f - 32) * 5/9\n\nprint(celsius_to_fahrenheit(100))\nprint(fahrenheit_to_celsius(32))\nprint(celsius_to_fahrenheit(0))",
+          "hints": [
+            "Celsius to Fahrenheit: multiply by 9/5, then add 32.",
+            "Fahrenheit to Celsius: subtract 32 first, then multiply by 5/9.",
+            "Use return to send the result back: return c * 9/5 + 32"
+          ],
+          "testCases": [
+            {
+              "id": "tc-8-1-1",
+              "description": "100°C should equal 212.0°F",
+              "type": "contains",
+              "expectedOutput": "212.0"
+            },
+            {
+              "id": "tc-8-1-2",
+              "description": "32°F should equal 0.0°C",
+              "type": "contains",
+              "expectedOutput": "0.0"
+            }
+          ],
+          "concepts": [
+            "functions",
+            "parameters",
+            "return",
+            "arithmetic"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-9",
+    "order": 9,
+    "title": "Error Handling",
+    "description": "Handle errors gracefully and debug your programs like a pro.",
+    "icon": "🛡️",
+    "color": "#dc2626",
+    "quiz": [
+      {
+        "id": "q9-1",
+        "type": "multiple-choice",
+        "question": "Which block in try-except always runs, even if an error occurred?",
+        "options": [
+          "try",
+          "except",
+          "finally",
+          "else"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The finally block always executes, whether or not an exception occurred. It's used for cleanup operations like closing files."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-9-1",
+        "moduleId": "module-9",
+        "order": 1,
+        "title": "try, except, and finally",
+        "objective": "Use try-except to handle errors gracefully and prevent programs from crashing.",
+        "explanation": "When Python encounters an error while running your code, it raises an **exception**. Without handling it, the program crashes and shows a traceback.\n\n**try-except** lets you catch exceptions and handle them gracefully:\n\n```python\ntry:\n    # code that might fail\nexcept SomeError:\n    # what to do when that error occurs\n```\n\n**Common Python exceptions:**\n| Exception | When it occurs |\n|-----------|---------------|\n| ValueError | Wrong type of value (e.g., int(\"hello\")) |\n| TypeError | Wrong type operation (e.g., \"a\" + 1) |\n| ZeroDivisionError | Division by zero |\n| IndexError | List index out of range |\n| FileNotFoundError | File doesn't exist |\n| NameError | Variable doesn't exist |\n| KeyError | Dictionary key doesn't exist |\n\n**finally** block always runs (for cleanup):\n```python\ntry:\n    ...\nexcept ValueError:\n    ...\nfinally:\n    print(\"This always runs\")\n```",
+        "analogy": "Error handling is like wearing a seatbelt. You don't expect an accident, but if one happens, the seatbelt (the except block) prevents catastrophic consequences. The finally block is like always taking your keys when you leave the car — you do it regardless of whether there was an accident.",
+        "exampleCode": "# Basic try-except\ntry = int(\"hello\")  # This will fail\n    print(number)\nexcept ValueError:\n    print(\"That's not a valid number!\")\n\n# Handling multiple exceptions\ndef safe_divide(a, b):\n    try:\n        result = a / b\n        return result\n    except ZeroDivisionError:\n        print(\"Error divide by zero!\")\n        return None\n    except TypeError:\n        print(\"Error provide numbers only!\")\n        return None\n\nprint(safe_divide(10, 2))   # 5.0\nprint(safe_divide(10, 0))   # Error message + None\nprint(safe_divide(10, \"x\")) # Error message + None\n\n# finally block\ndef read_number():\n    try:\n        n = int(input(\"Enter a number: \"))\n        print(\"You entered:\", n)\n    except ValueError:\n        print(\"That wasn't a number!\")\n    finally:\n        print(\"Thank you for using this program!\")",
+        "lineByLine": [
+          {
+            "line": "try:",
+            "explanation": "Everything inside this block is \"attempted.\" Python monitors for any errors."
+          },
+          {
+            "line": "number = int(\"hello\")",
+            "explanation": "int(\"hello\") fails because \"hello\" cannot be converted to a number — raises ValueError."
+          },
+          {
+            "line": "except ValueError:",
+            "explanation": "Catches specifically ValueError exceptions. Only runs if a ValueError occurred in the try block."
+          },
+          {
+            "line": "    print(\"That's not a valid number!\")",
+            "explanation": "This friendly message replaces a confusing error traceback."
+          },
+          {
+            "line": "finally:",
+            "explanation": "This block runs no matter what — whether the try succeeded or an exception was caught."
+          }
+        ],
+        "expectedOutput": "That's not a valid number!\n5.0\nError divide by zero!\nNone\nError provide numbers only!\nNone",
+        "syntax": "try:\n    # risky code\nexcept ExceptionType:\n    # handle specific error\nexcept (Error1, Error2):\n    # handle multiple errors\nexcept Exception as e:\n    # handle any error, access it as e\nelse:\n    # runs only if NO exception occurred\nfinally:\n    # always runs",
+        "starterCode": "# Write a safe calculator that handles errors\n# Ask the user for two numbers and a math operation\n# Handle: invalid numbers, division by zero\n\ndef safe_calculator(num1, num2, operation):\n    try:\n        if operation == \"+\":\n            return num1 + num2\n        elif operation == \"/\":\n            # Add your zero-division handling here\n            pass\n    except ZeroDivisionError:\n        pass  # Replace with proper error message\n\nprint(safe_calculator(10, 2, \"+\"))\nprint(safe_calculator(10, 0, \"/\"))",
+        "commonMistakes": [
+          {
+            "mistake": "except:\n    pass",
+            "explanation": "Bare except catches every possible error including system errors, which can hide serious bugs. Always specify the exception type.",
+            "fix": "except ValueError:\n    print(\"Wrong value!\")"
+          },
+          {
+            "mistake": "try:\n    code\n    code\n    code\nexcept:\n    ...",
+            "explanation": "Putting too much code in a try block makes it hard to know which line caused the error.",
+            "fix": "Keep try blocks as small as possible — only wrap the specific line that might fail."
+          }
+        ],
+        "prerequisites": [
+          "lesson-8-1"
+        ],
+        "estimatedMinutes": 22,
+        "tags": [
+          "try",
+          "except",
+          "finally",
+          "errors",
+          "exceptions"
+        ],
+        "exercise": {
+          "id": "ex-9-1",
+          "title": "Safe Number Input",
+          "description": "Write a function called safe_int(text) that:\n- Tries to convert the text to an integer\n- Returns the integer if successful\n- Returns -1 (and prints \"Invalid number\") if conversion fails\n\nTest with: safe_int(\"42\"), safe_int(\"hello\"), safe_int(\"3.14\")",
+          "difficulty": "intermediate",
+          "starterCode": "def safe_int(text):\n    try:\n        # Try to convert text to int\n        pass\n    except ValueError:\n        # Handle the error\n        pass\n\nprint(safe_int(\"42\"))      # Should print 42\nprint(safe_int(\"hello\"))   # Should print \"Invalid number\" then -1\nprint(safe_int(\"3.14\"))    # Should print \"Invalid number\" then -1",
+          "solution": "def safe_int(text):\n    try:\n        return int(text)\n    except ValueError:\n        print(\"Invalid number\")\n        return -1\n\nprint(safe_int(\"42\"))\nprint(safe_int(\"hello\"))\nprint(safe_int(\"3.14\"))",
+          "hints": [
+            "Use int(text) inside the try block.",
+            "If it succeeds, return the integer: return int(text).",
+            "If it fails, print \"Invalid number\" and return -1."
+          ],
+          "testCases": [
+            {
+              "id": "tc-9-1-1",
+              "description": "safe_int(\"42\") should return 42",
+              "type": "contains",
+              "expectedOutput": "42"
+            },
+            {
+              "id": "tc-9-1-2",
+              "description": "safe_int(\"hello\") should print \"Invalid number\"",
+              "type": "contains",
+              "expectedOutput": "Invalid number"
+            }
+          ],
+          "concepts": [
+            "try",
+            "except",
+            "ValueError",
+            "return"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "module-10",
+    "order": 10,
+    "title": "OOP Basics",
+    "description": "Model real-world entities using Python classes and objects.",
+    "icon": "🏗️",
+    "color": "#059669",
+    "quiz": [
+      {
+        "id": "q10-1",
+        "type": "multiple-choice",
+        "question": "What is the purpose of __init__ in a Python class?",
+        "options": [
+          "To delete an object",
+          "To initialize an object's attributes when it is created",
+          "To print the object",
+          "To inherit from another class"
+        ],
+        "correctAnswer": 1,
+        "explanation": "__init__ is the constructor method. It runs automatically when you create a new object from the class, and it sets up the initial state (attributes) of that object."
+      }
+    ],
+    "lessons": [
+      {
+        "id": "lesson-10-1",
+        "moduleId": "module-10",
+        "order": 1,
+        "title": "Classes and Objects",
+        "objective": "Define a class with attributes and methods, then create and use objects from it.",
+        "explanation": "**Object-Oriented Programming (OOP)** organizes code around objects — data and the functions that act on that data bundled together.\n\n- A **class** is a blueprint (like the design of a car model).\n- An **object** is an instance of a class (like a specific car built from that design).\n\n**Defining a class:**\n```python\nclass Dog:\n    def __init__(self, name, breed):\n        self.name = name\n        self.breed = breed\n    \n    def bark(self):\n        print(f\"{self.name} says: Woof!\")\n```\n\n**Creating objects:**\n```python\ndog1 = Dog(\"Rex\", \"German Shepherd\")\ndog1.bark()  # Rex says: Woof!\n```\n\n**Key terms:**\n- **__init__** — runs when an object is created.\n- **self** to the current object. Always the first parameter in methods.\n- **Attributes** attached to an object (self.name, self.breed).\n- **Methods** defined inside a class.",
+        "analogy": "A class is like a cookie cutter. The cutter defines the shape (blueprints for a cookie — circular, with a star cutout). Every time you press the cutter into dough, you create a new cookie (object). Each cookie has the same shape but can have different decorations (different attribute values).",
+        "exampleCode": "class Student:\n    def __init__(self, name, age, grade):\n        self.name = name\n        self.age = age\n        self.grade = grade\n        self.scores = []      # empty list by default\n    \n    def add_score(self, score):\n        self.scores.append(score)\n    \n    def get_average(self):\n        if not self.scores:\n            return 0\n        return sum(self.scores) / len(self.scores)\n    \n    def introduce(self):\n        avg = self.get_average()\n        print(f\"I'm {self.name}, age {self.age}, grade {self.grade}.\")\n        if avg > 0:\n            print(f\"My current average is {avg:.1f}\")\n\n# Creating objects\nalice = Student(\"Alice\", 20, \"Sophomore\")\nbob = Student(\"Bob\", 21, \"Junior\")\n\n# Using methods\nalice.add_score(85)\nalice.add_score(92)\nalice.add_score(78)\nalice.introduce()\n\n# Accessing attributes directly\nprint(f\"\\n{bob.name} is in grade: {bob.grade}\")",
+        "lineByLine": [
+          {
+            "line": "class Student:",
+            "explanation": "Defines a new class named Student. Classes by convention use CamelCase names."
+          },
+          {
+            "line": "def __init__(self, name, age, grade):",
+            "explanation": "__init__ is the constructor. self is automatic (Python passes it). name, age, grade are parameters you provide when creating a Student."
+          },
+          {
+            "line": "self.name = name",
+            "explanation": "Creates an attribute name on this object and stores the value passed in."
+          },
+          {
+            "line": "self.scores = []",
+            "explanation": "Creates an empty list attribute. Each Student object gets their own separate scores list."
+          },
+          {
+            "line": "def add_score(self, score):",
+            "explanation": "A method that adds a score to this student's scores list. self refers to the student calling the method."
+          },
+          {
+            "line": "alice = Student(\"Alice\", 20, \"Sophomore\")",
+            "explanation": "Creates a new Student object. __init__ runs automatically with name=\"Alice\", age=20, grade=\"Sophomore\"."
+          }
+        ],
+        "expectedOutput": "I'm Alice, age 20, grade Sophomore.\nMy current average is 85.0\n\nBob is in grade: Junior",
+        "syntax": "class ClassName:\n    def __init__(self, param1, param2):\n        self.attr1 = param1\n        self.attr2 = param2\n    \n    def method_name(self):\n        # code using self.attr1, etc.\n\n# Create an object\nobj = ClassName(value1, value2)\nobj.method_name()",
+        "starterCode": "# Define a class called 'BankAccount' with:\n# - Attributes: owner (name), balance (starts at 0)\n# - Method deposit(amount): adds amount to balance\n# - Method withdraw(amount): subtracts if enough balance, else prints \"Insufficient funds\"\n# - Method show_balance(): prints the current balance\n\nclass BankAccount:\n    def __init__(self, owner):\n        # Initialize attributes\n        pass\n\n# Test your class\naccount = BankAccount(\"Alice\")\naccount.deposit(1000)\naccount.withdraw(250)\naccount.show_balance()  # Should print: Balance: 750",
+        "commonMistakes": [
+          {
+            "mistake": "def __init__(name, age):",
+            "explanation": "self must always be the first parameter in every method. Without it, Python cannot identify which object is being used.",
+            "fix": "def __init__(self, name, age):"
+          },
+          {
+            "mistake": "student1 = Student\nstudent1.__init__(\"Alice\", 20)",
+            "explanation": "This is not the correct way to create an object. Call the class like a function.",
+            "fix": "student1 = Student(\"Alice\", 20)"
+          }
+        ],
+        "prerequisites": [
+          "lesson-9-1"
+        ],
+        "estimatedMinutes": 30,
+        "tags": [
+          "class",
+          "object",
+          "__init__",
+          "self",
+          "methods",
+          "OOP"
+        ],
+        "exercise": {
+          "id": "ex-10-1",
+          "title": "Rectangle Class",
+          "description": "Create a class called Rectangle with:\n- __init__(self, width, height)\n- method area() that returns width * height\n- method perimeter() that returns 2 * (width + height)\n- method describe() that prints: \"Rectangle: 5x3, Area: 15, Perimeter: 16\"\n\nTest with width=5, height=3.",
+          "difficulty": "intermediate",
+          "starterCode": "class Rectangle:\n    def __init__(self, width, height):\n        # Store width and height as attributes\n        pass\n    \n    def area(self):\n        # Return width * height\n        pass\n    \n    def perimeter(self):\n        # Return 2 * (width + height)\n        pass\n    \n    def describe(self):\n        # Print a formatted description\n        pass\n\n# Test\nrect = Rectangle(5, 3)\nprint(rect.area())        # 15\nprint(rect.perimeter())   # 16\nrect.describe()",
+          "solution": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n    \n    def perimeter(self):\n        return 2 * (self.width + self.height)\n    \n    def describe(self):\n        print(f\"Rectangle: {self.width}x{self.height}, Area: {self.area()}, Perimeter: {self.perimeter()}\")\n\nrect = Rectangle(5, 3)\nprint(rect.area())\nprint(rect.perimeter())\nrect.describe()",
+          "hints": [
+            "In __init__, store the values: self.width = width, self.height = height.",
+            "area() should return self.width * self.height.",
+            "describe() can call other methods: self.area() and self.perimeter()."
+          ],
+          "testCases": [
+            {
+              "id": "tc-10-1-1",
+              "description": "area() should return 15",
+              "type": "contains",
+              "expectedOutput": "15"
+            },
+            {
+              "id": "tc-10-1-2",
+              "description": "perimeter() should return 16",
+              "type": "contains",
+              "expectedOutput": "16"
+            }
+          ],
+          "concepts": [
+            "class",
+            "__init__",
+            "self",
+            "methods",
+            "return"
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "practice-1",
+    "title": "Even or Odd",
+    "description": "Write a program that prints whether a number is even or odd. Use num = 17.",
+    "difficulty": "beginner",
+    "starterCode": "num = 17\n# Print \"Even\" if num is divisible by 2, otherwise print \"Odd\"\n",
+    "solution": "num = 17\nif num % 2 == 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")",
+    "hints": [
+      "Use the modulus operator %. If num % 2 equals 0, the number is even.",
+      "Use if-else to print the correct word."
+    ],
+    "testCases": [
+      {
+        "id": "p1-1",
+        "description": "Should print Odd for 17",
+        "type": "contains",
+        "expectedOutput": "Odd"
+      }
+    ],
+    "concepts": [
+      "modulus",
+      "if-else"
+    ]
+  },
+  {
+    "id": "practice-2",
+    "title": "FizzBuzz",
+    "description": "Print numbers from 1 to 20. For multiples of 3 print \"Fizz\", for multiples of 5 print \"Buzz\", for multiples of both print \"FizzBuzz\", otherwise print the number.",
+    "difficulty": "easy",
+    "starterCode": "for i in range(1, 21):\n    # Add your conditions here\n    pass\n",
+    "solution": "for i in range(1, 21):\n    if i % 3 == 0 and i % 5 == 0:\n        print(\"FizzBuzz\")\n    elif i % 3 == 0:\n        print(\"Fizz\")\n    elif i % 5 == 0:\n        print(\"Buzz\")\n    else:\n        print(i)",
+    "hints": [
+      "Check divisibility by both 3 and 5 first (use and).",
+      "Then check just 3, then just 5, then the else.",
+      "Use i % 3 == 0 to check if i is divisible by 3."
+    ],
+    "testCases": [
+      {
+        "id": "p2-1",
+        "description": "Should contain FizzBuzz",
+        "type": "contains",
+        "expectedOutput": "FizzBuzz"
+      },
+      {
+        "id": "p2-2",
+        "description": "Should contain Fizz",
+        "type": "contains",
+        "expectedOutput": "Fizz"
+      }
+    ],
+    "concepts": [
+      "for loop",
+      "modulus",
+      "if-elif-else"
+    ]
+  },
+  {
+    "id": "practice-3",
+    "title": "Reverse a String",
+    "description": "Write a function called reverse_string(s) that returns the reversed version of a string. Test: reverse_string(\"hello\") should return \"olleh\".",
+    "difficulty": "easy",
+    "starterCode": "def reverse_string(s):\n    # Return the reversed string\n    # Hint: use slicing [::-1]\n    pass\n\nprint(reverse_string(\"hello\"))   # olleh\nprint(reverse_string(\"Python\"))  # nohtyP\n",
+    "solution": "def reverse_string(s):\n    return s[::-1]\n\nprint(reverse_string(\"hello\"))\nprint(reverse_string(\"Python\"))",
+    "hints": [
+      "Python strings support slicing: s[start:stop:step].",
+      "A step of -1 reverses the string: s[::-1].",
+      "Return the reversed string using return."
+    ],
+    "testCases": [
+      {
+        "id": "p3-1",
+        "description": "reverse_string(\"hello\") should output olleh",
+        "type": "contains",
+        "expectedOutput": "olleh"
+      },
+      {
+        "id": "p3-2",
+        "description": "reverse_string(\"Python\") should output nohtyP",
+        "type": "contains",
+        "expectedOutput": "nohtyP"
+      }
+    ],
+    "concepts": [
+      "functions",
+      "slicing",
+      "strings"
+    ]
+  },
+  {
+    "id": "practice-4",
+    "title": "Count Vowels",
+    "description": "Write a function count_vowels(text) that returns the number of vowels (a,e,i,o,u) in a string (case-insensitive). Test: count_vowels(\"Hello World\") should return 3.",
+    "difficulty": "intermediate",
+    "starterCode": "def count_vowels(text):\n    vowels = \"aeiouAEIOU\"\n    count = 0\n    # Loop through each character in text\n    # If the character is in vowels, increment count\n    return count\n\nprint(count_vowels(\"Hello World\"))  # 3\nprint(count_vowels(\"Python\"))       # 1\n",
+    "solution": "def count_vowels(text):\n    vowels = \"aeiouAEIOU\"\n    count = 0\n    for char in text:\n        if char in vowels:\n            count += 1\n    return count\n\nprint(count_vowels(\"Hello World\"))\nprint(count_vowels(\"Python\"))",
+    "hints": [
+      "Loop through each character: for char in text:",
+      "Check if char is a vowel: if char in vowels:",
+      "Use count += 1 to increment the counter."
+    ],
+    "testCases": [
+      {
+        "id": "p4-1",
+        "description": "count_vowels(\"Hello World\") should output 3",
+        "type": "contains",
+        "expectedOutput": "3"
+      },
+      {
+        "id": "p4-2",
+        "description": "count_vowels(\"Python\") should output 1",
+        "type": "contains",
+        "expectedOutput": "1"
+      }
+    ],
+    "concepts": [
+      "functions",
+      "for loop",
+      "strings",
+      "in operator"
+    ]
+  },
+  {
+    "id": "practice-5",
+    "title": "Number Pyramid",
+    "description": "Print a number pyramid with 5 rows:\n1\n12\n123\n1234\n12345",
+    "difficulty": "intermediate",
+    "starterCode": "# Print the number pyramid\n# Hint: use nested loops or string multiplication\n\n",
+    "solution": "for i in range(1, 6):\n    row = \"\"\n    for j in range(1, i + 1):\n        row += str(j)\n    print(row)",
+    "hints": [
+      "The outer loop controls rows (1 to 5).",
+      "The inner loop builds each row by adding numbers 1 to i.",
+      "Convert numbers to strings and concatenate them."
+    ],
+    "testCases": [
+      {
+        "id": "p5-1",
+        "description": "Should contain \"12345\"",
+        "type": "contains",
+        "expectedOutput": "12345"
+      },
+      {
+        "id": "p5-2",
+        "description": "Should start with \"1\" on first line",
+        "type": "contains",
+        "expectedOutput": "1"
+      }
+    ],
+    "concepts": [
+      "nested loops",
+      "strings",
+      "for loop"
+    ]
+  }
+]
